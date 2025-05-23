@@ -1,27 +1,72 @@
-
 <!DOCTYPE HTML>
 <html lang="en">
-    
 <head>
-        <title>MyPage</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-</head>
+    <title>MyPage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            resize: vertical;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
 <body>
 
-        <h1>Generate Quize </h1>
+    <div class="container">
+        <h1>Generate Quiz</h1>
 
         <form method="POST">
-          
-          <textarea name="text" rows="10" cols="50" placeholder="Paste your text here..."></textarea><br>
-          
-          <input type="submit" value="Generate Flashcards">
-        
+            <textarea name="text" rows="10" placeholder="Paste your text here..."></textarea><br>
+            <input type="submit" value="Generate Flashcards">
         </form>
-
+    </div>
 
 </body>
-
 </html>

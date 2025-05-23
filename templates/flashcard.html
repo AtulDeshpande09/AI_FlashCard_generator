@@ -1,29 +1,108 @@
-
 <!DOCTYPE HTML>
 <html lang="en">
-    
 <head>
-        <title>MyPage</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
+  <title>Flashcards | MyPage</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    header {
+      background: #2d6cdf;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      font-size: 1.5em;
+      color: #2d6cdf;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: #f0f4ff;
+      border-left: 4px solid #2d6cdf;
+      margin-bottom: 15px;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    li strong {
+      color: #2d6cdf;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      padding: 10px 20px;
+      background: #2d6cdf;
+      color: white;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    a:hover {
+      background: #184bb7;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        margin: 20px;
+        padding: 15px;
+      }
+
+      li {
+        font-size: 0.95em;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-        <h1>Question Answer Pair</h1>
+  <header>
+    <h1>Flashcard Generator</h1>
+  </header>
 
-        <h2>Generated Flashcards</h2>
-            <ul>
-              {% for question, answer in flashcards %}
-                <li><strong>Q:</strong> {{ question }} <br><strong>A:</strong> {{ answer }}</li>
-              {% endfor %}
-            </ul>
+  <main>
+    <h2>Generated Flashcards</h2>
+    <ul>
+      {% for question, answer in flashcards %}
+        <li><strong>Q:</strong> {{ question }} <br><strong>A:</strong> {{ answer }}</li>
+      {% endfor %}
+    </ul>
 
-        <a href="{{ url_for('download_flashcards') }}">Download as Anki Deck</a>
-
-
+    <a href="{{ url_for('download_flashcards') }}">📥 Download as Anki Deck</a>
+  </main>
 
 </body>
-
 </html>
