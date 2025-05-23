@@ -1,6 +1,9 @@
 # 🧠 AI-Powered Flashcard & Quiz Generator
 
-Turn any block of text into intelligent, cloze-style flashcards using natural language processing (NLP). Perfect for students, educators, and self-learners. Built with `Flask`, powered by `nltk`, and exports directly to `Anki` decks.
+Transform plain text into intelligent, fill-in-the-blank flashcards using Natural Language Processing.  
+Perfect for students, educators, autodidacts, and lifelong learners.
+
+Built with `Flask` + `NLTK`, styled with love — and exports directly to Anki.
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)
 ![License](https://img.shields.io/badge/License-MIT-green)
@@ -10,44 +13,51 @@ Turn any block of text into intelligent, cloze-style flashcards using natural la
 
 ## ✨ Features
 
-- **Named Entity Recognition (NER)** to generate meaningful question-answer pairs
-- **Cloze deletion (fill-in-the-blank)** format for deeper learning
-- **One-click Anki deck export** (`.apkg`) for long-term retention
-- Minimalist and responsive **web interface**
-- 100% offline and open-source
+- 🎯 Uses **Named Entity Recognition (NER)** to extract key concepts
+- ✍️ Generates **cloze-style flashcards** (fill-in-the-blank)
+- 📤 **Export to Anki** (`.apkg`) for spaced repetition
+- ⚡ Clean, minimalist, and responsive UI (HTML + CSS or React + Tailwind)
+- 🧩 Fully local & open-source — no data leaves your machine
 
 ---
 
-## 🖼️ Demo
+## 🖼️ Screenshots
 
-> Paste in any paragraph.  
-> Instantly generate intelligent flashcards.  
-> Export to Anki. Done.
+### 🏠 Home Page
+Paste your text to get started  
+<img src="1.png" alt="Home" width="600"/>
 
-![demo](https://user-images.githubusercontent.com/demo-gif-placeholder.gif)  
-*(Coming soon: Live demo & screenshots)*
+### 📋 Flashcards View
+Preview the generated flashcards  
+<img src="2.png" alt="Flashcards" width="600"/>
+
+### ⬇️ Export
+One-click to download as an Anki deck  
+<img src="3.png" alt="Download" width="600"/>
 
 ---
 
-## ⚙️ How It Works
+## 🧠 How It Works
 
-1. Input any text (article, notes, etc.).
-2. The app uses **nltk's NER** to identify important concepts.
-3. Flashcards are created by **blanking out** named entities.
-4. You can view them in-browser or **export to Anki**.
+1. ✏️ Paste a paragraph or set of notes.
+2. 🧠 App runs **Named Entity Recognition** using NLTK.
+3. 🧩 Replaces named entities with blanks to create question-answer pairs.
+4. 🎴 Preview in browser or **export to Anki** for serious study.
 
 ---
 
 ## 🚀 Getting Started
 
-### 1. Clone & Install
+### 🧰 Backend (Flask)
 
 ```bash
 git clone https://github.com/yourusername/flashcard-generator.git
-cd flashcard-generator
+cd flashcard-generator/backend
 python -m venv venv
-source venv/bin/activate
+source venv/bin/activate  # or venv\Scripts\activate on Windows
 pip install -r requirements.txt
+python app.py
+
 ```
 
 ## 📦 Export to Anki
@@ -69,36 +79,6 @@ Output:
 
 > Q: _____ was born in Ulm, Germany in 1879.
 A: Albert Einstein
-
-
-
-
----
-
-## 📁 Project Structure
-
-flashcard-generator/
-├── app.py
-├── templates/
-│   ├── index.html
-│   └── flashcard.html
-├── static/               # (optional assets)
-├── requirements.txt
-└── flashcards.apkg       # generated output
-
-
----
-
-## ✅ To-Do
-
-[ ] Flashcard editing before download
-
-[ ] Language detection & multilingual support
-
-[ ] UI enhancements
-
-[ ] Support for PDFs or copied lecture notes
-
 
 
 ---
